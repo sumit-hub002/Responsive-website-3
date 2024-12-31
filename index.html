@@ -1,0 +1,478 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Pet Clinic Website</title>
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <!-- StyleSheet -->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+  <!-- Navigation Bar -->
+   <header class="fixed top-0 w-full shadow-lg z-50 bg-amber-950">
+    <div class="container mx-auto px-6 py-6 flex justify-between items-center">
+      <!-- Logo -->
+       <a href="#home">
+        <img src="./Assets/logo.png" alt="Logo" style="height: 80px;">
+       </a>
+
+
+       <!-- Hidden on small screen show on large screen -->
+        <nav class="hidden lg:flex space-x-6">
+          <a href="#" class="font-normal text-white text-xl hover:text-gray-300">Home</a>
+          <a href="#" class="font-normal text-white text-xl hover:text-gray-300">About</a>
+          <a href="#" class="font-normal text-white text-xl hover:text-gray-300">Services</a>
+          <a href="#" class="font-normal text-white text-xl hover:text-gray-300">Resources</a>
+          <a href="#" class="font-normal text-white text-xl hover:text-gray-300">Contact</a>
+        </nav>
+
+        <a href="#" class="hidden lg:inline-block text-white font-medium text-xl border border-white px-6 py-4 rounded-lg hover:bg-white hover:text-black"><span class="pr-1"><i class="fa-solid fa-phone"></i></span>
+          Call Now
+        </a>
+
+
+        <button class="lg:hidden text-white transition duration-300" id="menu-toggle">
+          <i class="fas fa-bars fa-2xl"></i>
+        </button>
+    </div>
+
+
+    <!-- Mobila Navigation Bar show on mobile -->
+     <div class="lg:hidden px-6 py-2 space-y-2 hidden" id="mobile-menu">
+          <a href="#" class="block text-center hover:underline font-normal text-white text-xl hover:text-gray-300">Home</a>
+          <a href="#" class="block text-center hover:underline font-normal text-white text-xl hover:text-gray-300">About</a>
+          <a href="#" class="block text-center hover:underline font-normal text-white text-xl hover:text-gray-300">Services</a>
+          <a href="#" class="block text-center hover:underline font-normal text-white text-xl hover:text-gray-300">Resources</a>
+          <a href="#" class="block text-center hover:underline font-normal text-white text-xl hover:text-gray-300">Contact</a>
+        </nav>
+
+        <div class="flex justify-center items-center my-2">
+          <a href="#" class="text-white font-medium text-xl border border-white px-6 py-4 rounded-lg hover:bg-white hover:text-black"><span class="pr-1"><i class="fa-solid fa-phone"></i></span>
+          Call Now
+          </a>
+        </div>
+     </div>
+   </header>
+
+
+
+   <!-- Hero Section -->
+   <section class="py-20 min-h-screen relative" style="margin-top: 120px; background-image: url(./Assets/Hero-2.jpg); background-size: cover; background-repeat: no-repeat;">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container mx-auto relative z-10">
+      <h1 class="font-medium text-3xl text-white text-center mt-12">Noah's Ark Pet Clinic</h1>
+      <h1 class="font-normal text-5xl text-white text-center mt-2">Caring for <span class="font-bold text-amber-700">Your Furry </span>Friends</h1>
+      <p class="font-normal text-white text-2xl text-center mt-2">Noah's Ark Pet Clinic, nestled in the historic heart of Jackson Heights, Queens, offers <br> compassionate care  for your furry companions. Our bilingual staff is dedicated <br> to providing  top-notch veterinary services for dogs and cats</p>
+      <div class="flex justify-center items-center gap-4 mt-4">
+        <a href="#" class="text-white font-medium text-xl border border-white px-6 py-4 rounded-lg hover:bg-white hover:text-black">
+          <span class="pr-1"><i class="fa-solid fa-magnifying-glass"></i></span>
+          Know More
+        </a>
+        <a href="#" class="text-white font-medium text-xl border border-white px-6 py-4 rounded-lg hover:bg-white hover:text-black">
+          <span class="pr-1"><i class="fa-solid fa-phone"></i></span>
+          Call Now
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section class="py-12 bg-amber-200">
+    <div class="container mx-auto">
+      <h1 class="text-5xl font-normal text-center">Know <span class="font-bold text-amber-700">About</span> US:</h1>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 border-2 border-amber-800 shadow-lg rounded-lg mt-4 p-4">
+        <div class="col-span-2 mt-6 ">
+          <div class="flex justify-center items-center">
+            <img src="./Assets/Profile Image.jpg" alt="Img" class="w-96 h-96 rounded-full shadow-lg border-4 border-amber-800 p-4">
+          </div>
+          <h1 class="text-2xl font-bold text-center mt-2">Dr. Cesar Tello DVM</h1>
+          <p class="text-xl font-medium text-center mt-1 italic">1997 Alumnus of</p>
+          <p class="text-xl font-medium text-center italic">Cornell University College</p>
+          <p class="text-xl font-medium text-center italic"> of Veterinary Medicine</p>
+        </div>
+
+        <div class="col-span-2 mt-6">
+          <h1 class="text-5xl font-bold text-center md:text-left">Dr. Cesar Tello:</h1>
+          <p class="text-center md:text-left font-medium text-gray-600 text-xl mt-2">"Dr. Cesar Tello was born in Lima, Peru and his family immigrated to the United States when he was a toddler. Since both his parents are also veterinarians, he was exposed to the world of veterinary medicine from a very young age. While growing up in Jackson Heights he had many pets - 4 cats, 2 dogs, 2 hamsters and 2 birds. He studied at St. Joan of Arc and then attended Brooklyn Technical High School where he majored in Aeronautical Engineering. He graduated from Cornell with a bachelors degree in Animal Science in 1993 and received his veterinary degree in 1997 While at Cornell, Dr. Tello participated in the Big Brother-Little Brother Program and was heavily involved with student organizing. During the summer between undergrad and grad school, Dr. Tello was a New York City Government Scholar at CUNY. While in vet school, Dr."</p>
+
+
+          <div class="mt-4 flex sm:justify-center md:justify-start items-center">
+            <a href="#" class="font-medium text-xl border border-amber-800 px-6 py-4 rounded-lg bg-white text-black hover:bg-gray-100">
+            <span class="pr-1"><i class="fa-solid fa-phone"></i></span>
+            Call Now
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+   </section>
+
+
+
+   <!-- Services Section -->
+   <section class="py-12 bg-white">
+    <div class="container mx-auto">
+      <h1 class="text-5xl font-bold text-center text-black">Our Services</h1>
+      <p class="text-xl font-medium text-center">We offer general medicine and surgeries for companion animals. Our primary objective is to provide high quality medical <br>care to companion animals so as to enhance the human-animal bond.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-amber-200 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">1.</div>
+          <h1 class="text-3xl font-bold">Nail Clipping & Teeth Cleaning</h1>
+          <p class="text-xl font-medium text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <div class="bg-amber-200 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">2.</div>
+          <h1 class="text-3xl font-bold">Radiographs & Extraction</h1>
+          <p class="text-xl font-medium text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-200 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">3.</div>
+          <h1 class="text-3xl font-bold">Spay/Neuter Surgeries</h1>
+          <p class="text-xl font-medium text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-200 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">4.</div>
+          <h1 class="text-3xl font-bold">Routine Vaccinations</h1>
+          <p class="text-xl font-medium text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-200 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">5.</div>
+          <h1 class="text-3xl font-bold">Bloodwork & Urinalysis</h1>
+          <p class="text-xl font-medium text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-200 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">6.</div>
+          <h1 class="text-3xl font-bold">Parasitic Deworming & Ear Cleaning</h1>
+          <p class="text-xl font-medium text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-200 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">7.</div>
+          <h1 class="text-3xl font-bold">Orthopedic Surgeries</h1>
+          <p class="text-xl font-medium text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-200 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">8.</div>
+          <h1 class="text-3xl font-bold">Physical Exams & Soft Tissue</h1>
+          <p class="text-xl font-medium text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <h1 class="text-normal text-5xl text-start mt-10">Comprehensive <span class="text-amber-700 font-bold">Care for Various</span> Conditions:</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-amber-700 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">I.</div>
+          <h1 class="text-3xl font-bold">Liver Diseases</h1>
+          <p class="text-xl font-medium text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-700 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">II.</div>
+          <h1 class="text-3xl font-bold">Endocrine Diseases</h1>
+          <p class="text-xl font-medium text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-700 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">III.</div>
+          <h1 class="text-3xl font-bold">Cardiac Diseases</h1>
+          <p class="text-xl font-medium text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+
+        <div class="bg-amber-700 rounded-lg shadow-md mt-6 p-2 cursor-pointer hover:shadow-lg">
+          <div class="flex justify-center items-center w-16 h-16 p-1 bg-white rounded-full text-4xl m-4 font-bold">IV.</div>
+          <h1 class="text-3xl font-bold">Cancer</h1>
+          <p class="text-xl font-medium text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum impedit odio aspernatur nisi aliquam iure accusamus, eaque doloremque iusto.</p>
+
+          <div class="flex justify-start items-center p-2">
+            <a href="#" class="text-black font-medium text-xsm hover:text-gray-800">
+            Know More
+            </a>
+            <span class="ml-1"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+   </section>
+
+
+
+   <section class="py-12 bg-amber-950">
+    <div class="container mx-auto">
+      <h1 class="text-5xl font-normal text-center text-white">What <span class="font-bold">Our Client</span> Say's</h1>
+
+      <!-- Testimonial Container -->
+       <div id="testimonialCarousel" class="relative bg-gray-100 rounded-2xl p-6 mt-4">
+
+        <!-- Testimonial 1 -->
+         <div class="testimonial active">
+          <div class="flex justify-center items-center">
+            <img src="./Assets/Client-2.png" alt="Img" class="rounded-full shadow-md border-2 border-amber-900 p-2">
+          </div>
+          <h1 class="text-4xl font-bold text-center">Viv Richard</h1>
+          <p class="text-2xl font-medium text-center">Pet Owner</p>
+          <p class="text-xl font-normal text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea inventore harum modi qui delectus quia, eveniet vel doloribus repudiandae nemo cupiditate aliquid deserunt pariatur quod voluptatum officia odit suscipit et dolores quasi asperiores in. Tempore, saepe dolorum molestias voluptates numquam rerum quaerat tempora a beatae, repudiandae excepturi aut. Quae, laudantium.</p>
+         </div>
+
+
+         <!-- Testimonial 2 -->
+         <div class="testimonial">
+          <div class="flex justify-center items-center">
+            <img src="./Assets/Client-4.png" alt="Img" class="rounded-full shadow-md border-2 border-amber-900 p-2">
+          </div>
+          <h1 class="text-4xl font-bold text-center">Tom Brandon</h1>
+          <p class="text-2xl font-medium text-center">Pet Owner</p>
+          <p class="text-xl font-normal text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea inventore harum modi qui delectus quia, eveniet vel doloribus repudiandae nemo cupiditate aliquid deserunt pariatur quod voluptatum officia odit suscipit et dolores quasi asperiores in. Tempore, saepe dolorum molestias voluptates numquam rerum quaerat tempora a beatae, repudiandae excepturi aut. Quae, laudantium.</p>
+         </div>
+
+
+
+         <!-- Testimonial 3 -->
+         <div class="testimonial">
+          <div class="flex justify-center items-center">
+            <img src="./Assets/Client-3.png" alt="Img" class="rounded-full shadow-md border-2 border-amber-900 p-2">
+          </div>
+          <h1 class="text-4xl font-bold text-center">Alexa Perry</h1>
+          <p class="text-2xl font-medium text-center">Pet Owner</p>
+          <p class="text-xl font-normal text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea inventore harum modi qui delectus quia, eveniet vel doloribus repudiandae nemo cupiditate aliquid deserunt pariatur quod voluptatum officia odit suscipit et dolores quasi asperiores in. Tempore, saepe dolorum molestias voluptates numquam rerum quaerat tempora a beatae, repudiandae excepturi aut. Quae, laudantium.</p>
+         </div>
+
+
+         <!-- Testimonial 4 -->
+         <div class="testimonial">
+          <div class="flex justify-center items-center">
+            <img src="./Assets/Client-5.png" alt="Img" class="rounded-full shadow-md border-2 border-amber-900 p-2">
+          </div>
+          <h1 class="text-4xl font-bold text-center">Jordy Brar</h1>
+          <p class="text-2xl font-medium text-center">Pet Owner</p>
+          <p class="text-xl font-normal text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea inventore harum modi qui delectus quia, eveniet vel doloribus repudiandae nemo cupiditate aliquid deserunt pariatur quod voluptatum officia odit suscipit et dolores quasi asperiores in. Tempore, saepe dolorum molestias voluptates numquam rerum quaerat tempora a beatae, repudiandae excepturi aut. Quae, laudantium.</p>
+         </div>
+
+
+         <!-- Testimonial 5 -->
+         <div class="testimonial">
+          <div class="flex justify-center items-center">
+            <img src="./Assets/Client-1.png" alt="Img" class="rounded-full shadow-md border-2 border-amber-900 p-2">
+          </div>
+          <h1 class="text-4xl font-bold text-center">Elisaa</h1>
+          <p class="text-2xl font-medium text-center">Pet Owner</p>
+          <p class="text-xl font-normal text-center mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea inventore harum modi qui delectus quia, eveniet vel doloribus repudiandae nemo cupiditate aliquid deserunt pariatur quod voluptatum officia odit suscipit et dolores quasi asperiores in. Tempore, saepe dolorum molestias voluptates numquam rerum quaerat tempora a beatae, repudiandae excepturi aut. Quae, laudantium.</p>
+         </div>
+
+
+       </div>
+
+
+
+       <!-- Navigation button -->
+     <div class="mt-2 flex justify-center">
+      <button onclick="changeTestimonial(-1)" class="mr-2 p-2 rounded-full border border-white bg-white hover:bg-gray-200">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <button onclick="changeTestimonial(1)" class="mr-2 p-2 rounded-full border border-white bg-white hover:bg-gray-200">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+     </div>
+
+    </div> 
+   </section>
+
+
+   <!-- Footer Section -->
+    <section class="py-12 bg-gray-200 text-black">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="col-span-1">
+            <h1 class="text-4xl font-bold">Contacts</h1>
+            <div class="mt-4">
+              <span class="text-2xl mr-2"><i class="fa-solid fa-phone"></i>718-396-2111</span>
+            </div>
+            <div class="mt-2">
+              <span class="mt-6 text-2xl mr-2"><i class="fa-solid fa-phone"></i>718-396-2111</span>
+            </div>
+
+            <!-- Icons -->
+            <div class="mt-6">
+              <span class="text-4xl p-2" style="cursor: pointer;"><i class="fa-brands fa-facebook"></i></span>
+              <span class="text-4xl p-2 cursor pointer"><i class="fa-brands fa-whatsapp"></i></span>
+              <span class="text-4xl p-2 cursor-pointer"><i class="fa-brands fa-instagram"></i></span>
+              <span class="text-4xl p-2" style="cursor: pointer;"><i class="fa-brands fa-linkedin"></i></span>
+            </div>
+
+            <!-- Address & Email -->
+            <div>
+              <h1 class="font-bold text-2xl">Petclinic123@gmail.com</h1>
+              <p class="font-normal text-xl pt-2">85-05 37th Avenue ackson Heights, NY 11372 </p>
+            </div>
+          </div>
+
+
+          <div class="col-span-2">
+            <div class="flex justify-center items-center">
+              <h1 class="text-5xl font-normal text-center"><span class="font-bold">Want</span> To Keep <span class="font-bold">Your Pet In,</span> Our Center <span class="font-bold">?</span></h1>
+            </div>
+            <div class="mt-6 flex justify-center items-center">
+              <a href="#" class="border-2 border-black text-black bg-white px-8 py-4 rounded-lg shadow-lg font-medium text-3xl hover:bg-gray-100">Book Now</a>
+            </div>
+          </div>
+
+
+          <div class="col-span-1">
+            <h1 class="text-4xl font-bold">Opening Hours:</h1>
+            <h1 class="text-2xl font-normal mt-4">Mon-Fri: 9AM-5PM</h1>
+            <h1 class="text-2xl font-normal">Saturday: Closed</h1>
+            <h1 class="text-2xl font-normal">Sunday: Closed</h1>
+
+
+            <div>
+            <h1 class="text-4xl font-bold mt-6">Quick Links:</h1>
+            <h1 class="text-2xl font-normal cursor-pointer">About</h1>
+            <h1 class="text-2xl font-normal cursor-pointer">Services</h1>
+            <h1 class="text-2xl font-normal cursor-pointer">Contact</h1>
+            <h1 class="text-2xl font-normal cursor-pointer">Resources</h1>
+          </div>
+
+        </div>
+
+
+        
+
+      </div>
+
+      <hr class="p-[1px] bg-black rounded-full mt-2">
+          <h1 class="text-2xl font-normal text-center pt-2">Noah's Ark Pet Clinic</h1>
+          <p class="text-xsl font-normal text-center">© Copyright Noah's Ark Pet Clinic. All rights reserved.</p>
+      </div>
+    </section>
+
+
+
+
+
+
+  
+
+<!-- Swiper.js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- AOS.js -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- javaScript -->
+<script src="script.js"></script>
+
+<!-- Config.js -->
+ <script src="config.js"></script>
+</body>
+</html>-
